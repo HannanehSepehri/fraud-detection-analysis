@@ -1,29 +1,42 @@
-# fraud-detection-analysis
-Analysis of financial transactions and fraud detection using python and pandas
-# 🔍 Financial Fraud Detection Analysis
+# 🔍 Credit Card Fraud Detection Analysis
 
-تحلیل تراکنش‌های مالی و شناسایی الگوهای مشکوک با Python و Pandas
+تحلیل اکتشافی روی ۲۸۴,۸۰۷ تراکنش واقعی کارت بانکی برای شناسایی الگوهای تقلب مالی
 
 ## 📌 درباره پروژه
-این پروژه یک تحلیل اکتشافی روی داده‌های تراکنش‌های مالی انجام می‌دهد.
-هدف شناسایی الگوهای غیرعادی و تراکنش‌های مشکوک با استفاده از Python است.
+این پروژه با استفاده از dataset واقعی Kaggle، الگوهای تراکنش‌های جعلی را در میان داده‌های مالی شناسایی و تحلیل می‌کند.
+
+## 📊 دیتاست
+- منبع: [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- تعداد تراکنش: ۲۸۴,۸۰۷
+- نسبت fraud: ۰.۱۷٪ (داده‌ی به‌شدت نامتوازن)
 
 ## 🛠 ابزارها
-- Python 3.13
-- Pandas
-- NumPy
+Python | Pandas | NumPy | Matplotlib
 
-## 📊 تحلیل‌های انجام شده
-- بررسی توزیع مبالغ تراکنش‌ها
-- دسته‌بندی تراکنش‌ها بر اساس وضعیت (مشکوک / نرمال / کم‌مبلغ)
-- محاسبه مالیات و امتیاز ریسک هر تراکنش
-- فیلتر و شناسایی تراکنش‌های پرریسک
+## 🔎 یافته‌های کلیدی
+- داده به‌شدت نامتوازن است (۹۹.۸۳٪ تراکنش عادی)
+- میانه مبلغ تراکنش‌های جعلی (۹.۲۵ دلار) به‌طور قابل‌توجهی کمتر از میانگین آن‌ها (۱۲۲ دلار) است — نشان‌دهنده چند تراکنش بزرگ استثنایی
+- ویژگی‌های V17، V14، V12 بیشترین همبستگی منفی با تقلب دارند
+- ویژگی‌های V11، V4، V2 بیشترین همبستگی مثبت با تقلب دارند
+
+## 📈 نمودارها
+نمودارهای تولید شده در پوشه پروژه:
+- `plot1_distribution.png` — توزیع تراکنش‌ها
+- `plot2_time_analysis.png` — تحلیل زمانی
+- `plot3_statistics.png` — آمار توصیفی
+- `plot4_correlation.png` — همبستگی ویژگی‌ها
 
 ## 🚀 اجرا
 ```bash
-pip install pandas numpy
+pip install pandas numpy matplotlib
 jupyter notebook fraud-detection-analysis.ipynb
 ```
+**نکته:** فایل `creditcard.csv` به دلیل حجم باید جدا از [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) دانلود شود.
+
+## 🔭 مراحل بعدی
+- ساخت مدل ML (Random Forest, XGBoost)
+- مدیریت داده نامتوازن با SMOTE
+- ارزیابی با Precision, Recall, F1-Score
 
 ## 👩‍💻 توسعه‌دهنده
 Hannaneh Sepehri — MSc AI Student
